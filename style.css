@@ -1,0 +1,141 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+
+body {
+    height: 100vh;
+    font-family: sans-serif;
+    overflow: hidden;
+    color: #fff;
+
+}
+
+nav {
+
+    background-color: #292929;
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    font-size: 2.4rem;
+
+}
+
+
+.menu-item {
+    display: inline-block;
+    height: 50px;
+    width: 300px;
+    line-height: 50px;
+    cursor: pointer;
+    transition: background-color .3s;
+    
+}
+
+.menu-item:hover {
+    background-color: #363636;
+}
+
+.dropdown {
+    position: absolute;
+    width: 300px;
+    z-index: 50;
+}
+
+.dropdown li {
+    background-color: #363636;
+    opacity: 0;
+    display: none;
+    transition: color .3s;
+
+}
+
+.dropdown li:hover {
+    color: skyblue
+}
+
+.menu-item:hover .dropdown li {
+    display: block;
+    animation: menu .5s forwards
+}
+
+@keyframes menu {
+    from {
+        opacity: 0;
+        transform: scale(0.6);
+        transform: translateX(-100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+        transform: translateX(0);
+    }
+}
+
+
+.menu-item:hover .dropdown li:nth-child(2) {
+    animation-delay: .2s;
+}
+
+.menu-item:hover .dropdown li:nth-child(3) {
+    animation-delay: .4s;
+}
+
+.menu-item:hover .dropdown li:nth-child(4) {
+    animation-delay: .6s;
+}
+
+.hero-img {
+    position: relative;
+    height: 100%;
+    background-image: url('./images/technology-1283624_1920.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.hero-text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    
+    text-align: center;
+    
+    color: #fff;
+    font-family: sans-serif;
+}
+
+.hero-text h1 {
+    font-size: 5rem;
+    
+    margin: 20px;
+}
+
+.hero-text p{
+    font-size: 3.6rem;
+}
+
+
+
+
+
+
+
+.hero-shadow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .4)
+}
